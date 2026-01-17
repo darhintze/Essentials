@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Bouncing ball.ma
-//Last modified: Fri, Jan 16, 2026 09:22:59 PM
+//Last modified: Fri, Jan 16, 2026 09:35:46 PM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.4.2";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "C9A2162A-4AF4-027B-DEAF-29823B2E9A7D";
+fileInfo "UUID" "83D2C89D-4B0D-04C1-76B7-F6BC7F3E4B2C";
 createNode transform -s -n "persp";
 	rename -uid "0CDDB7A1-4E68-143F-F426-EAABCD593A7F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 20.621620848046405 9.7908765743390198 30.939452775850739 ;
-	setAttr ".r" -type "double3" -13.538352729602495 33.000000000000703 0 ;
+	setAttr ".t" -type "double3" 25.656239029453378 6.5404193394571122 37.56132213452657 ;
+	setAttr ".r" -type "double3" -5.7383527296025898 34.200000000001076 -2.4034498424271149e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0ADDB822-492D-4EFB-8819-BC9EC6FA7BE8";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 38.741458489138964;
+	setAttr ".coi" 46.485602995653892;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -82,6 +82,7 @@ createNode mesh -n "pSphereShape1" -p "pSphere1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.87500014901161194 0.57500007748603821 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -159,16 +160,63 @@ createNode animCurveTL -n "pSphere1_translateY";
 	rename -uid "419D6D62-4BC5-38F9-F2D5-CF90911C2295";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 13 7.1751177228525007 24 1;
-	setAttr -s 3 ".kit[1:2]"  18 1;
-	setAttr -s 3 ".kot[1:2]"  18 1;
-	setAttr -s 3 ".kix[0:2]"  0.029094917017656621 1 0.037700859651199313;
-	setAttr -s 3 ".kiy[0:2]"  0.99957665329064971 0 -0.99928906987996258;
-	setAttr -s 3 ".kox[0:2]"  0.029094900969763492 1 0.037700845495160118;
-	setAttr -s 3 ".koy[0:2]"  0.99957665375775939 0 -0.99928907041403692;
+	setAttr -s 3 ".ktv[0:2]"  1 0.38647453323032077 13 7.1751177228525007
+		 24 0.38647453323032077;
+	setAttr -s 3 ".kix[0:2]"  0.038709004496595874 0.24606984265449991 
+		0.05136632096718656;
+	setAttr -s 3 ".kiy[0:2]"  0.99925052562952521 -0.96925209957780833 
+		-0.9986798791756526;
+	setAttr -s 3 ".kox[0:2]"  0.038709016385075769 0.24606905440396959 
+		0.051366331104653336;
+	setAttr -s 3 ".koy[0:2]"  0.99925052516898882 -0.96925229969535598 
+		-0.99867987865423979;
+createNode animCurveTU -n "pSphere1_visibility";
+	rename -uid "91D58FAE-4517-2636-B494-3DB0649A8171";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  1 1 2 1 13 1 23 1 24 1;
+	setAttr -s 5 ".kit[0:4]"  1 1 9 9 9;
+	setAttr -s 5 ".kix[0:4]"  1 1 1 1 1;
+	setAttr -s 5 ".kiy[0:4]"  0 0 0 0 0;
+createNode animCurveTU -n "pSphere1_scaleX";
+	rename -uid "5A751287-463D-1008-7AC5-399D0C0FB3F0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  1 1.1733628805845338 2 0.75 13 1 23 0.75
+		 24 1.1733628805845338;
+	setAttr -s 5 ".kit[0:4]"  1 1 18 18 18;
+	setAttr -s 5 ".kot[0:4]"  1 1 18 18 18;
+	setAttr -s 5 ".kix[0:4]"  1 1 1 1 1;
+	setAttr -s 5 ".kiy[0:4]"  0 0 0 0 0;
+	setAttr -s 5 ".kox[0:4]"  1 1 1 1 1;
+	setAttr -s 5 ".koy[0:4]"  0 0 0 0 0;
+createNode animCurveTU -n "pSphere1_scaleY";
+	rename -uid "660E7215-495F-1F23-529F-7A906EB4B508";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  1 0.41823913523337186 2 1.25 13 1 23 1.25
+		 24 0.41823913523337186;
+	setAttr -s 5 ".kit[0:4]"  1 1 18 18 18;
+	setAttr -s 5 ".kot[0:4]"  1 1 18 18 18;
+	setAttr -s 5 ".kix[0:4]"  1 1 1 1 1;
+	setAttr -s 5 ".kiy[0:4]"  0 0 0 0 0;
+	setAttr -s 5 ".kox[0:4]"  1 1 1 1 1;
+	setAttr -s 5 ".koy[0:4]"  0 0 0 0 0;
+createNode animCurveTU -n "pSphere1_scaleZ";
+	rename -uid "6F9339D4-4347-79DA-6FD4-7A9E6EA694B3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  1 1.1733628805845338 2 0.75 13 1 23 0.75
+		 24 1.1733628805845338;
+	setAttr -s 5 ".kit[0:4]"  1 1 18 18 18;
+	setAttr -s 5 ".kot[0:4]"  1 1 18 18 18;
+	setAttr -s 5 ".kix[0:4]"  1 1 1 1 1;
+	setAttr -s 5 ".kiy[0:4]"  0 0 0 0 0;
+	setAttr -s 5 ".kox[0:4]"  1 1 1 1 1;
+	setAttr -s 5 ".koy[0:4]"  0 0 0 0 0;
 select -ne :time1;
-	setAttr ".o" 17;
-	setAttr ".unw" 17;
+	setAttr ".o" 15;
+	setAttr ".unw" 15;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -212,7 +260,11 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+connectAttr "pSphere1_visibility.o" "pSphere1.v";
 connectAttr "pSphere1_translateY.o" "pSphere1.ty";
+connectAttr "pSphere1_scaleX.o" "pSphere1.sx";
+connectAttr "pSphere1_scaleY.o" "pSphere1.sy";
+connectAttr "pSphere1_scaleZ.o" "pSphere1.sz";
 connectAttr "polySphere1.out" "pSphereShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
