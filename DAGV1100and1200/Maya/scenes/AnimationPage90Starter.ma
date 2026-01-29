@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: AnimationPage90Starter.ma
-//Last modified: Wed, Jan 28, 2026 11:44:22 PM
+//Last modified: Wed, Jan 28, 2026 11:49:36 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "materialxStack" -nodeType "MaterialXSurfaceShader" -dataType "MxDocumentStackData"
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "36808CBF-4B1B-0E53-1E78-A08F57F5A4FD";
+fileInfo "UUID" "0CF10440-4DCA-846C-0CCA-DFBCB669DCE0";
 createNode transform -s -n "persp";
 	rename -uid "1DFBA4A4-134A-59AA-2739-3C93ABFFD067";
 	setAttr ".v" no;
@@ -265,20 +265,20 @@ createNode materialxStack -n "materialXStackShape1" -p "materialXStack1";
 	setAttr -k off ".v";
 	setAttr ".docs" -type "string" "[\n    {\n        \"document\": \"AAABo3icdZFJDoMwDEX3nMLyuipFbLpg2HTZ9grIhaAiZUBhENy+YUiVRlTKxvbX9/tOkk+Cw8h01yiZYnS+YJ4FiaCe6Yb45I7iK2YBQPKgme4kXkz3IEmwFJ1OhNDPrel1g66pZN2bKqYRpKpYxepN+7wVfJMXv7LF32xoZDtY71Jxpa3pWsQII/HBlNEJlocQrmChw7E2dnObxqEtfFyrcUgNpWdwxOfl/Bv+6FI7trfF3D/8fkAWfABrhYya\",\n        \"name\": \"document1\"\n    }\n]\n";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "233FE222-404F-9AED-10FF-DD9A1993D4F6";
+	rename -uid "E3FF390A-4193-75FC-6A54-7ABB6D611676";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5E931B62-47EC-A9C1-CC38-02BE00D73747";
+	rename -uid "4B6907BE-4FD3-DF78-D472-D3AF41B5A5DD";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "74AED7C1-40E4-13AF-E8BB-9C835F816722";
+	rename -uid "D73044C5-459F-3EA5-6C19-AE84EE66692F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "77C5A574-48E6-EFF7-01F2-ED923AD6C1C6";
+	rename -uid "C5F2CD26-4731-AD34-A15A-3EBAC110FBA6";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "138E985A-7348-29D9-3700-8797FCF8ABC7";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8F6F3315-415B-BD47-08EF-E6B74C4A3F16";
+	rename -uid "DC560516-4B58-D92F-0BD4-B9A64BE848A8";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "29CEB1A3-0B4C-F279-EB3D-3F89FAD794C5";
 	setAttr ".g" yes;
@@ -371,8 +371,8 @@ createNode animCurveTA -n "Elbow_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 50 12 -50 24 50;
 select -ne :time1;
-	setAttr ".o" 20;
-	setAttr ".unw" 20;
+	setAttr ".o" 24;
+	setAttr ".unw" 24;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
