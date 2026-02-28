@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: AnimationFlyingStarter.ma
-//Last modified: Fri, Feb 27, 2026 08:25:24 PM
+//Last modified: Fri, Feb 27, 2026 08:45:10 PM
 //Codeset: 1252
 file -rdi 1 -ns "spaceShuttle" -rfn "spaceShuttleRN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GITHUB/Essentials/DAGV1100and1200/Maya//assets/spaceShuttle.ma";
@@ -16,12 +16,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "1DED3463-4D84-32C6-9E8E-E0B031E15C6E";
+fileInfo "UUID" "DD0C8C22-437B-BF6B-21E5-CC8C20ABD2C6";
 createNode transform -s -n "persp";
 	rename -uid "168B34B1-4946-E5F1-420F-B19C1930A455";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6563.5742561632014 5906.0214738485338 16368.806576856468 ;
-	setAttr ".r" -type "double3" -10.200000000000211 2.00000000000006 -6.7130719532649017e-16 ;
+	setAttr ".t" -type "double3" -4647.6280978951445 15783.903905823867 71234.326041448032 ;
+	setAttr ".r" -type "double3" -10.200000000000212 2.00000000000006 -6.7130719532649017e-16 ;
 	setAttr ".rpt" -type "double3" -9.3036119665608599e-13 1.4614350004282811e-12 -1.195043476729695e-12 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4C0E4A75-40E3-90AA-AB5D-D6A00534F72D";
@@ -29,7 +29,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".ncp" 100;
 	setAttr ".fcp" 1000000;
-	setAttr ".coi" 37506.826703662417;
+	setAttr ".coi" 93287.366653906429;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -93823,7 +93823,7 @@ createNode nurbsCurve -n "shipe_curveShape" -p "shipe_curve";
 		;
 createNode transform -n "cam_curve";
 	rename -uid "E1073FBD-4AD2-3D01-1064-62B1ECFCBBBE";
-	setAttr ".t" -type "double3" 1908.5819294506546 7589.579549460479 0 ;
+	setAttr ".t" -type "double3" 1631.9800933763745 7589.579549460479 0 ;
 createNode nurbsCurve -n "cam_curveShape" -p "cam_curve";
 	rename -uid "6BE317A5-4049-82EF-B256-6ABBC88124DB";
 	setAttr -k off ".v";
@@ -93851,15 +93851,15 @@ createNode nurbsCurve -n "cam_curveShape" -p "cam_curve";
 		-3704.0853939896842 -6179.946145944039 -1163.814711127794
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D0D6D254-4DC1-4FCE-9ECC-508A9486AD63";
+	rename -uid "827032B6-42A4-A14C-564A-CF971121C82E";
 	setAttr -s 8 ".lnk";
 	setAttr -s 8 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8F85AC7E-4D71-ADC3-4A32-D1B2CE752D54";
+	rename -uid "04881691-4754-8F75-DAF8-9DA539A80117";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E91F473E-4763-4FD6-49B3-D7A10C17AFBC";
+	rename -uid "8DCA911A-4C00-7F67-B8F1-53938F99FA73";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F211228D-41D9-C346-2311-A1BDE33B6530";
+	rename -uid "08FFF950-47C3-F575-017D-0B81768758CA";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
@@ -93867,7 +93867,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "E42775CE-488F-137D-EEC7-348AEB124D44";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "DFFFF474-4DA6-A482-C01C-5699F88C771C";
+	rename -uid "B9B4AA65-4046-2936-540F-C7893F5BC144";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "42A50984-4FB3-E154-F0C7-2594E8DDE1B1";
 	setAttr ".g" yes;
