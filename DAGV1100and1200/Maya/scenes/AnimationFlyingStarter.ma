@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: AnimationFlyingStarter.ma
-//Last modified: Sat, Feb 28, 2026 07:41:31 PM
+//Last modified: Sat, Feb 28, 2026 07:45:06 PM
 //Codeset: 1252
 file -rdi 1 -ns "spaceShuttle" -rfn "spaceShuttleRN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GITHUB/Essentials/DAGV1100and1200/Maya//assets/spaceShuttle.ma";
@@ -16,7 +16,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "AF8DF6C4-4334-F7F6-7F1F-3790B0A720DA";
+fileInfo "UUID" "2C708C44-4E7F-2A0A-DCD6-E0BDE18D2A94";
 createNode transform -s -n "persp";
 	rename -uid "168B34B1-4946-E5F1-420F-B19C1930A455";
 	setAttr ".v" no;
@@ -94433,8 +94433,8 @@ createNode animCurveTL -n "cam_curveShape_controlPoints_11__zValue";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  200 -32586.002572247635;
 select -ne :time1;
-	setAttr ".o" 233;
-	setAttr ".unw" 233;
+	setAttr ".o" 58;
+	setAttr ".unw" 58;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
