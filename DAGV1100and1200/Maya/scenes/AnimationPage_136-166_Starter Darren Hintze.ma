@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: AnimationPage_136-166_Starter.ma
-//Last modified: Tue, Mar 24, 2026 10:34:38 PM
+//Name: AnimationPage_136-166_Starter Darren Hintze.ma
+//Last modified: Tue, Mar 24, 2026 10:35:00 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -dr 1 -rfn "Ultimate_Bony_v1_0_5RN" -op
 		 "v=0;" -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Bony_v1.0.5.ma";
@@ -18,7 +18,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "478BEA20-493C-9F1D-E721-11A94AF6712E";
+fileInfo "UUID" "5D5AA986-4E06-4A87-B913-D1A28E66F678";
 createNode transform -s -n "persp";
 	rename -uid "A99A115B-2B40-A95A-EB94-24A6C71E6B67";
 	setAttr ".v" no;
@@ -568,4 +568,4 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "sharedReferenceNode.sr" "Ultimate_Bony_v1_0_5RN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of AnimationPage_136-166_Starter.ma
+// End of AnimationPage_136-166_Starter Darren Hintze.ma
