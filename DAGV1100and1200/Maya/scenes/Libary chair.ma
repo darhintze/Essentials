@@ -1,20 +1,7 @@
 //Maya ASCII 2026 scene
-//Name: Scene 2 Hintze.ma
-//Last modified: Fri, Apr 17, 2026 11:17:11 PM
+//Name: Libary chair.ma
+//Last modified: Fri, Apr 17, 2026 11:10:17 PM
 //Codeset: 1252
-file -rdi 1 -ns "Library_table_2" -rfn "Library_table_2RN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Library table 2.ma";
-file -rdi 1 -ns "Coffee_mug" -rfn "Coffee_mugRN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Coffee mug.ma";
-file -rdi 2 -ns "Library_books_closed" -rfn "Coffee_mug:Library_books_closedRN"
-		 -op "v=0;" -typ "mayaAscii" "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Library books closed.ma";
-file -rdi 1 -ns "Libary_chair1" -rfn "Libary_chairRN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Libary chair.ma";
-file -r -ns "Library_table_2" -dr 1 -rfn "Library_table_2RN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Library table 2.ma";
-file -r -ns "Coffee_mug" -dr 1 -rfn "Coffee_mugRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Coffee mug.ma";
-file -r -ns "Libary_chair1" -dr 1 -rfn "Libary_chairRN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Libary chair.ma";
 requires maya "2026";
 requires "mtoa" "5.5.4.2";
 currentUnit -l centimeter -a degree -t film;
@@ -23,28 +10,360 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "A41EC5EB-48F7-BB0A-F944-D5BBB71AAE71";
+fileInfo "UUID" "0AE90C12-44EC-7941-C555-38B5314A769E";
+createNode transform -n "pCube9";
+	rename -uid "EF3F6E91-40D3-B4B6-9D21-02A21B9D706D";
+	setAttr ".t" -type "double3" 4.2141591222092689 1.8553572426424521 5.1676634005090971 ;
+	setAttr ".r" -type "double3" 0 117.94113687313661 0 ;
+	setAttr ".s" -type "double3" 3.4167974603686995 3.4167974603686995 3.4167974603686995 ;
+createNode mesh -n "pCubeShape9" -p "pCube9";
+	rename -uid "88273F53-4C6D-9374-1D8D-CA9F8B2FA632";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 12 ".pt";
+	setAttr ".pt[51]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[52]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[61]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[62]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[64]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".pt[65]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".pt[67]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[68]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[77]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[78]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[80]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".pt[81]" -type "float3" 0 0 3.7252903e-09 ;
+createNode mesh -n "polySurfaceShape1" -p "pCube9";
+	rename -uid "27FB63EC-440E-315B-1047-C2824B2A4802";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 5 "f[2]" "f[8]" "f[12]" "f[52:54]" "f[68:70]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 6 "f[3]" "f[9]" "f[13]" "f[15:17]" "f[33:35]" "f[41:43]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 6 "f[0]" "f[6]" "f[10]" "f[61:63]" "f[77:79]" "f[88:91]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 7 "f[5]" "f[14]" "f[32]" "f[40]" "f[48:51]" "f[64:67]" "f[80:83]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 8 "f[4]" "f[18]" "f[22:24]" "f[36]" "f[44]" "f[55:60]" "f[71:76]" "f[84:87]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 7 "f[1]" "f[7]" "f[11]" "f[19:21]" "f[25:31]" "f[37:39]" "f[45:47]";
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 120 ".uvst[0].uvsp[0:119]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.58038324 0 0.58038324 1 0.58038324 0.25 0.58038324
+		 0.5 0.58038324 0.75 0.42611784 0 0.42611784 1 0.42611784 0.25 0.42611784 0.5 0.42611784
+		 0.75 0.18768799 0.25 0.375 0.43731201 0.18768801 0 0.375 0.81268799 0.42611787 0.81268799
+		 0.58038324 0.81268799 0.625 0.81268799 0.81231201 0 0.625 0.43731201 0.81231201 0.25
+		 0.58038324 0.43731201 0.42611784 0.43731201 0.81231201 0.25 0.81231201 0 0.875 0
+		 0.875 0.25 0.58038324 0.43731201 0.625 0.43731201 0.625 0.5 0.58038324 0.5 0.42611784
+		 0.43731201 0.42611784 0.5 0.375 0.43731201 0.375 0.5 0.22633851 0.25 0.375 0.39866149
+		 0.22633854 0 0.375 0.85133851 0.42611784 0.85133851 0.58038324 0.85133851 0.625 0.85133851
+		 0.77366149 0 0.625 0.39866149 0.77366149 0.25 0.58038324 0.39866149 0.42611784 0.39866149
+		 0.34936765 0.25 0.375 0.27563238 0.34936765 0 0.375 0.97436762 0.42611784 0.97436762
+		 0.58038324 0.97436762 0.625 0.97436762 0.65063238 0 0.625 0.27563238 0.65063238 0.25
+		 0.58038324 0.27563238 0.42611784 0.27563238 0.375 0.18693601 0.34936765 0.18693599
+		 0.22633851 0.18693599 0.18768799 0.18693599 0.125 0.18693599 0.37499997 0.56306398
+		 0.42611781 0.56306398 0.58038318 0.56306398 0.625 0.56306398 0.87499994 0.18693599
+		 0.87499994 0.18693599 0.81231201 0.18693601 0.81231201 0.18693601 0.77366149 0.18693601
+		 0.65063238 0.18693601 0.625 0.18693601 0.58038324 0.18693601 0.42611784 0.18693601
+		 0.375 0.062217161 0.34936765 0.062217161 0.22633852 0.062217161 0.18768799 0.062217161
+		 0.125 0.062217161 0.375 0.68778288 0.42611784 0.68778288 0.58038324 0.68778288 0.625
+		 0.68778288 0.875 0.062217161 0.875 0.062217161 0.81231201 0.062217161 0.81231201
+		 0.062217161 0.77366149 0.062217161 0.65063238 0.062217161 0.625 0.062217161 0.58038324
+		 0.062217161 0.42611781 0.062217161 0.34936765 0.18693599 0.22633851 0.18693599 0.22633852
+		 0.062217161 0.34936765 0.062217161 0.77366149 0.18693601 0.65063238 0.18693601 0.65063238
+		 0.062217161 0.77366149 0.062217161 0.58038324 0.18693601 0.42611784 0.18693601 0.42611781
+		 0.062217161 0.58038324 0.062217161;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 12 ".pt";
+	setAttr ".pt[51]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[52]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[61]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[62]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[64]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".pt[65]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".pt[67]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[68]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[77]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[78]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[80]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".pt[81]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr -s 94 ".vt[0:93]"  -0.50000006 -0.49999991 0.49999991 0.5 -0.49999991 0.49999991
+		 -0.50000006 -0.025612891 0.49999991 0.5 -0.025612891 0.49999991 -0.50000006 -0.025612891 -0.49999991
+		 0.5 -0.025612891 -0.49999991 -0.50000006 -0.49999991 -0.49999991 0.5 -0.49999991 -0.49999991
+		 0.32153285 -0.49999991 0.49999991 0.32153285 -0.025612891 0.49999991 0.32153285 -0.025612891 -0.49999991
+		 0.32153285 -0.49999991 -0.49999991 -0.29552877 -0.49999991 0.49999991 -0.29552877 -0.025612891 0.49999991
+		 -0.29552877 -0.025612891 -0.49999991 -0.29552877 -0.49999991 -0.49999991 -0.50000006 -0.025612891 -0.24924798
+		 -0.50000006 -0.49999991 -0.24924797 -0.29552877 -0.49999991 -0.24924797 0.32153285 -0.49999991 -0.24924797
+		 0.5 -0.49999991 -0.24924797 0.5 -0.025612891 -0.24924798 0.32153285 -0.025612891 -0.24924798
+		 -0.29552877 -0.025612891 -0.24924798 0.50064361 -0.49999991 -0.24924797 0.50064361 0.61834788 -0.24924766
+		 0.50064361 -0.49999991 -0.49999991 0.50064361 0.61834788 -0.49999958 0.32153285 0.61834788 -0.24924766
+		 0.32153285 0.61834788 -0.49999958 -0.29552877 0.61834788 -0.24924766 -0.29552877 0.61834788 -0.49999958
+		 -0.50000006 0.61834788 -0.24924766 -0.50000006 0.61834788 -0.49999958 -0.50000006 -0.025612891 -0.09464594
+		 -0.50000006 -0.49999991 -0.09464591 -0.29552877 -0.49999991 -0.09464591 0.32153285 -0.49999991 -0.09464591
+		 0.5 -0.49999991 -0.09464591 0.5 -0.025612891 -0.09464594 0.32153285 -0.025612891 -0.09464594
+		 -0.29552877 -0.025612891 -0.09464594 -0.50000006 -0.025612891 0.39747053 -0.50000006 -0.49999991 0.39747053
+		 -0.29552877 -0.49999991 0.39747053 0.32153285 -0.49999991 0.39747053 0.5 -0.49999991 0.39747053
+		 0.5 -0.025612891 0.39747053 0.32153285 -0.025612891 0.39747053 -0.29552877 -0.025612891 0.39747053
+		 -0.50000006 -0.14527985 0.49999985 -0.50000006 -0.14527985 0.39747053 -0.50000006 -0.14527985 -0.094645932
+		 -0.50000006 -0.14527985 -0.24924797 -0.50000006 -0.14527985 -0.49999985 -0.29552877 -0.14527985 -0.49999985
+		 0.32153285 -0.14527985 -0.49999985 0.5 -0.14527985 -0.49999985 0.50064361 0.33623779 -0.49999961
+		 0.50064361 0.33623797 -0.24924771 0.5 -0.14527985 -0.24924797 0.5 -0.14527985 -0.094645932
+		 0.5 -0.14527985 0.39747053 0.5 -0.14527985 0.49999985 0.32153285 -0.14527985 0.49999985
+		 -0.29552877 -0.14527985 0.49999985 -0.50000006 -0.38193989 0.49999985 -0.50000006 -0.38193989 0.39747053
+		 -0.50000006 -0.38193989 -0.094645932 -0.50000006 -0.38193989 -0.24924797 -0.50000006 -0.38193989 -0.49999985
+		 -0.29552877 -0.38193989 -0.49999985 0.32153285 -0.38193989 -0.49999985 0.5 -0.38193989 -0.49999985
+		 0.50064361 -0.22167823 -0.49999982 0.50064361 -0.22167823 -0.24924788 0.5 -0.38193989 -0.24924795
+		 0.5 -0.38193989 -0.094645932 0.5 -0.38193989 0.39747053 0.5 -0.38193989 0.49999985
+		 0.32153285 -0.38193989 0.49999985 -0.29552877 -0.38193989 0.49999985 -0.25022912 -0.14527985 0.39747053
+		 -0.25022912 -0.14527985 -0.094645932 -0.25022912 -0.38193989 -0.094645932 -0.25022912 -0.38193989 0.39747053
+		 0.25022912 -0.14527985 -0.094645932 0.25022912 -0.14527985 0.39747053 0.25022912 -0.38193989 0.39747053
+		 0.25022912 -0.38193989 -0.094645932 0.32153285 -0.14527985 0.46070525 -0.29552877 -0.14527985 0.46070525
+		 -0.29552877 -0.38193989 0.46070525 0.32153285 -0.38193989 0.46070525;
+	setAttr -s 184 ".ed";
+	setAttr ".ed[0:165]"  0 12 0 2 13 0 4 14 1 6 15 0 0 66 0 1 79 0 2 42 0 3 47 0
+		 4 54 0 5 57 1 6 17 0 7 20 1 8 1 0 9 3 0 10 5 1 11 7 0 8 80 1 9 48 1 10 56 1 11 19 1
+		 12 8 0 13 9 0 14 10 1 15 11 0 12 81 1 13 49 1 14 55 1 15 18 1 16 4 1 17 35 0 18 36 1
+		 19 37 1 20 38 0 16 53 1 17 18 1 18 19 1 19 20 1 20 76 0 21 22 0 22 23 0 23 16 0 20 24 0
+		 21 25 1 24 75 0 7 26 0 26 24 0 5 27 1 27 58 0 25 27 0 22 28 1 10 29 1 28 29 1 25 28 0
+		 29 27 0 23 30 1 14 31 1 30 31 1 28 30 0 31 29 0 16 32 0 30 32 0 4 33 0 33 31 0 32 33 0
+		 34 16 0 35 43 0 36 44 1 37 45 1 38 46 0 39 21 0 40 22 1 41 23 1 34 52 1 35 36 1 36 37 1
+		 37 38 1 38 77 1 39 40 1 40 41 1 41 34 1 42 34 0 43 0 0 44 12 1 45 8 1 46 1 0 47 39 0
+		 48 40 1 49 41 1 42 51 1 43 44 1 44 45 1 45 46 1 46 78 1 47 48 1 48 49 1 49 42 1 50 2 0
+		 51 67 0 52 68 0 53 69 1 54 70 0 55 71 1 56 72 1 57 73 1 58 74 0 59 25 0 60 21 0 61 39 1
+		 62 47 1 63 3 0 64 9 1 65 13 1 50 51 1 51 52 0 52 53 1 53 54 1 54 55 1 55 56 1 56 57 1
+		 57 58 1 58 59 1 59 60 1 60 61 1 61 62 0 62 63 1 63 64 1 64 65 0 65 50 1 66 50 0 67 43 1
+		 68 35 1 69 17 1 70 6 0 71 15 1 72 11 1 73 7 1 74 26 0 75 59 0 76 60 0 77 61 0 78 62 0
+		 79 63 0 80 64 0 81 65 0 66 67 1 67 68 0 68 69 1 69 70 1 70 71 1 71 72 1 72 73 1 73 74 1
+		 74 75 1 75 76 1 76 77 1 77 78 0 78 79 1 79 80 1 80 81 0 81 66 1 51 82 0 52 83 0 82 83 0
+		 68 84 0 83 84 0 67 85 0;
+	setAttr ".ed[166:183]" 85 84 0 82 85 0 61 86 0 62 87 0 86 87 0 78 88 0 88 87 0
+		 77 89 0 89 88 0 89 86 0 64 90 0 65 91 0 90 91 0 81 92 0 92 91 0 80 93 0 93 92 0 93 90 0;
+	setAttr -s 92 -ch 368 ".fc[0:91]" -type "polyFaces" 
+		f 4 0 24 159 -5
+		mu 0 4 0 19 107 90
+		f 4 1 25 95 -7
+		mu 0 4 2 21 71 61
+		f 4 148 133 -4 -133
+		mu 0 4 95 96 23 6
+		f 4 89 82 -1 -82
+		mu 0 4 63 64 20 8
+		f 4 -85 92 156 -6
+		mu 0 4 1 67 104 105
+		f 4 144 129 81 4
+		mu 0 4 90 91 62 0
+		f 4 157 -17 12 5
+		mu 0 4 105 106 14 1
+		f 4 93 -18 13 7
+		mu 0 4 68 70 16 3
+		f 4 -135 150 135 -16
+		mu 0 4 18 97 98 7
+		f 4 -84 91 84 -13
+		mu 0 4 15 65 66 9
+		f 4 158 -25 20 16
+		mu 0 4 106 107 19 14
+		f 4 94 -26 21 17
+		mu 0 4 70 71 21 16
+		f 4 -134 149 134 -24
+		mu 0 4 23 96 97 18
+		f 4 -83 90 83 -21
+		mu 0 4 20 64 65 15
+		f 4 10 -132 147 132
+		mu 0 4 12 26 93 94
+		f 4 3 27 -35 -11
+		mu 0 4 6 23 28 27
+		f 4 -36 -28 23 19
+		mu 0 4 29 28 23 18
+		f 4 -37 -20 15 11
+		mu 0 4 30 29 18 7
+		f 4 152 -44 -46 -137
+		mu 0 4 100 101 37 38
+		f 4 -52 -53 48 -54
+		mu 0 4 43 40 41 42
+		f 4 -57 -58 51 -59
+		mu 0 4 45 44 40 43
+		f 4 -61 56 -63 -64
+		mu 0 4 46 44 45 47
+		f 4 153 -38 41 43
+		mu 0 4 101 102 31 37
+		f 4 -12 44 45 -42
+		mu 0 4 31 10 38 37
+		f 4 -136 151 136 -45
+		mu 0 4 10 99 100 38
+		f 4 -39 42 52 -50
+		mu 0 4 34 32 41 40
+		f 4 -15 50 53 -47
+		mu 0 4 5 17 43 42
+		f 4 -40 49 57 -55
+		mu 0 4 35 34 40 44
+		f 4 -23 55 58 -51
+		mu 0 4 17 22 45 43
+		f 4 -41 54 60 -60
+		mu 0 4 25 35 44 46
+		f 4 -3 61 62 -56
+		mu 0 4 22 4 47 45
+		f 4 -29 59 63 -62
+		mu 0 4 4 25 46 47
+		f 4 146 131 29 -131
+		mu 0 4 92 93 26 50
+		f 4 34 30 -74 -30
+		mu 0 4 27 28 52 51
+		f 4 -75 -31 35 31
+		mu 0 4 53 52 28 29
+		f 4 -76 -32 36 32
+		mu 0 4 54 53 29 30
+		f 4 154 -77 -33 37
+		mu 0 4 102 103 55 31
+		f 4 38 -71 -78 69
+		mu 0 4 32 34 58 56
+		f 4 39 -72 -79 70
+		mu 0 4 34 35 59 58
+		f 4 -80 71 40 -65
+		mu 0 4 49 59 35 25
+		f 4 145 130 65 -130
+		mu 0 4 91 92 50 62
+		f 4 73 66 -90 -66
+		mu 0 4 51 52 64 63
+		f 4 -91 -67 74 67
+		mu 0 4 65 64 52 53
+		f 4 -92 -68 75 68
+		mu 0 4 66 65 53 54
+		f 4 155 -93 -69 76
+		mu 0 4 103 104 67 55
+		f 4 77 -87 -94 85
+		mu 0 4 56 58 70 68
+		f 4 78 -88 -95 86
+		mu 0 4 58 59 71 70
+		f 4 -96 87 79 -81
+		mu 0 4 61 71 59 49
+		f 4 88 -113 96 6
+		mu 0 4 60 73 72 2
+		f 4 72 -114 -89 80
+		mu 0 4 48 74 73 60
+		f 4 33 -115 -73 64
+		mu 0 4 24 75 74 48
+		f 4 -116 -34 28 8
+		mu 0 4 76 75 24 13
+		f 4 2 26 -117 -9
+		mu 0 4 4 22 78 77
+		f 4 -118 -27 22 18
+		mu 0 4 79 78 22 17
+		f 4 -119 -19 14 9
+		mu 0 4 80 79 17 5
+		f 4 -120 -10 46 47
+		mu 0 4 82 81 11 39
+		f 4 -106 -121 -48 -49
+		mu 0 4 36 83 82 39
+		f 4 -107 -122 105 -43
+		mu 0 4 33 84 83 36
+		f 4 -108 -123 106 -70
+		mu 0 4 57 85 84 33
+		f 4 -109 -124 107 -86
+		mu 0 4 69 86 85 57
+		f 4 -125 108 -8 -110
+		mu 0 4 87 86 69 3
+		f 4 -111 -126 109 -14
+		mu 0 4 16 88 87 3
+		f 4 -112 -127 110 -22
+		mu 0 4 21 89 88 16
+		f 4 -128 111 -2 -97
+		mu 0 4 72 89 21 2
+		f 4 112 97 -145 128
+		mu 0 4 72 73 91 90
+		f 4 162 164 -167 -168
+		mu 0 4 108 109 110 111
+		f 4 114 99 -147 -99
+		mu 0 4 74 75 93 92
+		f 4 -148 -100 115 100
+		mu 0 4 94 93 75 76
+		f 4 116 101 -149 -101
+		mu 0 4 77 78 96 95
+		f 4 -150 -102 117 102
+		mu 0 4 97 96 78 79
+		f 4 -151 -103 118 103
+		mu 0 4 98 97 79 80
+		f 4 -152 -104 119 104
+		mu 0 4 100 99 81 82
+		f 4 120 -138 -153 -105
+		mu 0 4 82 83 101 100
+		f 4 121 -139 -154 137
+		mu 0 4 83 84 102 101
+		f 4 122 -140 -155 138
+		mu 0 4 84 85 103 102
+		f 4 170 -173 -175 175
+		mu 0 4 112 113 114 115
+		f 4 -157 140 124 -142
+		mu 0 4 105 104 86 87
+		f 4 125 -143 -158 141
+		mu 0 4 87 88 106 105
+		f 4 178 -181 -183 183
+		mu 0 4 116 117 118 119
+		f 4 -160 143 127 -129
+		mu 0 4 90 107 89 72
+		f 4 113 161 -163 -161
+		mu 0 4 73 74 109 108
+		f 4 98 163 -165 -162
+		mu 0 4 74 92 110 109
+		f 4 -146 165 166 -164
+		mu 0 4 92 91 111 110
+		f 4 -98 160 167 -166
+		mu 0 4 91 73 108 111
+		f 4 123 169 -171 -169
+		mu 0 4 85 86 113 112
+		f 4 -141 171 172 -170
+		mu 0 4 86 104 114 113
+		f 4 -156 173 174 -172
+		mu 0 4 104 103 115 114
+		f 4 139 168 -176 -174
+		mu 0 4 103 85 112 115
+		f 4 126 177 -179 -177
+		mu 0 4 88 89 117 116
+		f 4 -144 179 180 -178
+		mu 0 4 89 107 118 117
+		f 4 -159 181 182 -180
+		mu 0 4 107 106 119 118
+		f 4 142 176 -184 -182
+		mu 0 4 106 88 116 119;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -s -n "persp";
-	rename -uid "6F8C682A-4D78-2DF6-2411-A29FAD687974";
+	rename -uid "8AA00D96-42CF-8CA0-F99E-13BFA0D4F6B4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 28.013400399610518 19.735069361702429 22.745922378172001 ;
-	setAttr ".r" -type "double3" -27.938352729590708 44.600000000004115 0 ;
+	setAttr ".t" -type "double3" 10.514126176798941 12.030841265617472 -3.1908126581351395 ;
+	setAttr ".r" -type "double3" -38.138352729541147 108.99999999996022 0 ;
 createNode camera -s -n "perspShape" -p "persp";
-	rename -uid "281B1EAC-4ECE-15A5-C14A-5E8799B998C8";
+	rename -uid "6BA6200B-4CFC-6077-9164-24A7EBAAB6C4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 36.454810075096404;
+	setAttr ".coi" 17.983491052158385;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
-	rename -uid "D44EF8AD-4DFF-99C0-9C2D-45899B2EE6E1";
+	rename -uid "DA86DB04-4EAA-E3C6-5104-62927382E826";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 1000.1 0 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
-	rename -uid "2266A586-4617-E293-1D27-CCB7870130D7";
+	rename -uid "7414DB91-4DB2-DCEA-F865-9E9AD54F9854";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -56,11 +375,11 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
-	rename -uid "4B41FC56-412A-E933-E30E-749C3828628A";
+	rename -uid "5908FAA0-4031-BA18-B618-FFA8AAEE63A5";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
-	rename -uid "4033A4B6-488C-5466-D0C9-91966D351A0C";
+	rename -uid "F47E44EA-424F-ED97-7987-36AA96005C61";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -72,12 +391,12 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
-	rename -uid "5ACFB474-4AFC-F580-84EA-F49217DA30CE";
+	rename -uid "7FD0722E-47A7-8225-3DA2-7F8EF744443F";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 1000.1 0 0 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
-	rename -uid "5172A2D2-48C4-6FE0-14DB-DAB9BF82918A";
+	rename -uid "3A2A6DE6-4E17-8BB5-7A99-8D960BE93D98";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -88,218 +407,12 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "pCube1";
-	rename -uid "E9CC76BE-4255-DAEC-9B8A-BFA154A2F509";
-	setAttr ".t" -type "double3" 0 -0.074964933776365372 0 ;
-	setAttr ".s" -type "double3" 23.967766654098497 0.60909076986351751 23.967766654098497 ;
-createNode mesh -n "pCubeShape1" -p "pCube1";
-	rename -uid "73E064FF-4DDB-65CA-35A1-0EA99AECC414";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.30268537998199463 0.90339881181716919 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube2";
-	rename -uid "805EB7DE-474C-A656-E528-59824D7E3470";
-	setAttr ".t" -type "double3" -11.75957892080803 6.7431260003814728 0 ;
-	setAttr ".s" -type "double3" 0.55841550161488485 13.748747069559512 23.760971968771688 ;
-createNode mesh -n "pCubeShape2" -p "pCube2";
-	rename -uid "B86BD350-4A58-B695-8E7E-3CB14DC27C7D";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube3";
-	rename -uid "8F4C1BBB-47D4-6C4C-66BD-DB85617F612B";
-	setAttr ".t" -type "double3" 0.10390422963471657 6.7431260003814728 -11.837598115926577 ;
-	setAttr ".r" -type "double3" 0 90 0 ;
-	setAttr ".s" -type "double3" 0.55841550161488485 13.748747069559512 23.760971968771688 ;
-createNode mesh -n "pCubeShape3" -p "pCube3";
-	rename -uid "23DB184A-4B49-0F99-D900-C5880F71E055";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "polySurfaceShape2" -p "pCube3";
-	rename -uid "529A5A3D-40A3-1FF4-B4EB-41816AF4D718";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube4";
-	rename -uid "76BF807D-45E4-1814-ED0B-C988483ED8F3";
-	setAttr ".t" -type "double3" -10.295018845567448 5.1961759560897205 0 ;
-	setAttr ".s" -type "double3" 2.1790130055808379 10.805686298937152 21.771784534029646 ;
-createNode mesh -n "pCubeShape4" -p "pCube4";
-	rename -uid "483341F0-4E7E-9E1A-4D7A-4E84F3821F29";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube5";
-	rename -uid "0CECD00B-444D-3B3F-4B71-14B5C205DA53";
-	setAttr ".t" -type "double3" -0.03083147394300978 5.1961759560897205 -9.9127440791701584 ;
-	setAttr ".r" -type "double3" 0 90 0 ;
-	setAttr ".s" -type "double3" 2.1790130055808379 10.805686298937152 21.469881516871993 ;
-createNode mesh -n "pCubeShape5" -p "pCube5";
-	rename -uid "F5F2212E-4A80-AEAB-3AC2-5B85DEC9441F";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.4375 0.5 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "polySurfaceShape3" -p "pCube5";
-	rename -uid "F0273826-4467-34C6-283B-B6B4F03D9EF4";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube6";
-	rename -uid "53827AD9-4BCB-97A2-4C2C-5290D4E37E58";
-	setAttr ".t" -type "double3" -3.249622106143379 2.5957112495083878 2.1919660740225977 ;
-	setAttr ".s" -type "double3" 3.9826328094950707 5.1731406908757345 12.713600384776214 ;
-createNode mesh -n "pCubeShape6" -p "pCube6";
-	rename -uid "4E8AED71-4B54-3FC8-4FE1-39BACC5A20EF";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube7";
-	rename -uid "303F46A8-47D0-3EEA-5538-AD98FD98618F";
-	setAttr ".t" -type "double3" 2.4407551813358221 3.1489636818390379 13.026479292698868 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".s" -type "double3" 0.55073869547923515 6.121383502321085 0.55073869547923515 ;
-	setAttr -av ".sx";
-	setAttr -av ".sy";
-	setAttr -av ".sz";
-createNode mesh -n "pCubeShape7" -p "pCube7";
-	rename -uid "4F6E48FF-43BC-B677-076C-98B2E86F0763";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "Libary_chair:persp1";
-	rename -uid "1C8C6F62-4373-82D7-FA41-82A46181235F";
+createNode transform -n "persp1";
+	rename -uid "C37952A5-465D-038D-E1AB-2DA4778CCA94";
 	setAttr ".t" -type "double3" 15.294490735964857 4.2208257086712742 2.375549112194939 ;
 	setAttr ".r" -type "double3" -14.738352729506229 81.399999999750705 1.063479244480182e-14 ;
-createNode camera -n "Libary_chair:persp1Shape" -p "Libary_chair:persp1";
-	rename -uid "7169CDCF-43B1-2B4F-3D9C-54A471E3DD9B";
+createNode camera -n "persp1Shape" -p "persp1";
+	rename -uid "6E0084D7-489F-EDB6-B15B-679E982C69F7";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".coi" 10.602057033377976;
@@ -307,29 +420,12 @@ createNode camera -n "Libary_chair:persp1Shape" -p "Libary_chair:persp1";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
-createNode transform -n "group";
-	rename -uid "918BFF9B-4876-D6D8-61B6-169AF649C01B";
-	setAttr ".t" -type "double3" 0 0 -6.5297661635787563 ;
-	setAttr ".r" -type "double3" 0 -62.356570872666829 0 ;
-	setAttr ".rp" -type "double3" 5.9442970543046467 2.4909140754392256 5.2761369046606319 ;
-	setAttr ".rpt" -type "double3" 7.1054273576010019e-15 0 -1.7763568394002505e-15 ;
-	setAttr ".sp" -type "double3" 5.9442970543046467 2.4909140754392256 5.2761369046606319 ;
-createNode transform -n "Libary_chair2:pCylinder3" -p "group";
-	rename -uid "CA1E26F2-4C9F-431C-92C9-80AC73DD1B25";
-	setAttr ".t" -type "double3" 0 0.65145644360132904 5.2505265842408404 ;
-	setAttr -av ".tz";
-	setAttr -av ".ty";
-	setAttr ".r" -type "double3" 0 19.708666180946231 0 ;
-	setAttr -av ".ry";
-	setAttr ".s" -type "double3" 1.2136056769929862 1.2136056769929862 1.2136056769929862 ;
-	setAttr -av ".sx";
-	setAttr -av ".sy";
-	setAttr -av ".sz";
+createNode transform -n "pCylinder3";
+	rename -uid "35C224EB-485A-0394-2636-71BF340373CE";
 	setAttr ".rp" -type "double3" 5.9442970752716064 1.8394576277088408 0.025610378950337798 ;
-	setAttr ".rpt" -type "double3" -2.4424906541753444e-15 0 4.4408920985006262e-16 ;
 	setAttr ".sp" -type "double3" 5.9442970752716064 1.8394576277088408 0.025610378950337798 ;
-createNode mesh -n "Libary_chair2:pCylinder3Shape" -p "Libary_chair2:pCylinder3";
-	rename -uid "A6657ABD-4902-FA25-83AD-868F3F1FE666";
+createNode mesh -n "pCylinder3Shape" -p "pCylinder3";
+	rename -uid "2794A650-4B90-1608-4A79-588E08DD8238";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:931]";
 	setAttr ".vir" yes;
@@ -3095,101 +3191,44 @@ createNode mesh -n "Libary_chair2:pCylinder3Shape" -p "Libary_chair2:pCylinder3"
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode polyMapDel -n "polyMapDel4";
+	rename -uid "401D6B47-4AB7-3B7D-A407-FF9AE8B86324";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:91]";
+createNode polyMapDel -n "polyMapDel3";
+	rename -uid "EF84D399-4750-9BDF-EBFF-57A8527FBA78";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:91]";
+createNode polyMapDel -n "polyMapDel2";
+	rename -uid "7961E714-4B3F-C7EC-09E3-A9A822307271";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:91]";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DE1EC3AC-4626-5808-5A9C-978962410216";
+	rename -uid "1A7770D5-4DAA-DD0E-1C6F-17AE530C0125";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "22DF0C95-46ED-4D50-F4F7-07AA86CCB585";
+	rename -uid "BEC3A8B4-41DF-E41F-1E09-E78C5DB71105";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D8C015C0-4509-4810-462D-D7942E6F20D4";
+	rename -uid "F414F5C6-455A-E595-562B-C69B3F43DEFA";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "A4A2042B-4CD4-4FCB-9CCF-F381603BFD5C";
+	rename -uid "E81FE21C-4172-0B55-AF6D-C2890CF0F0B4";
 createNode displayLayer -n "defaultLayer";
-	rename -uid "BAC51FAE-4BD6-A141-1608-F0B7071F61F0";
+	rename -uid "1D84E22E-4EF0-96ED-E8D1-758126D79B84";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "3937FFF8-4316-98B5-3E83-3892C27D4AC8";
+	rename -uid "D85A011A-4096-70CC-0EF0-CFB2365388FC";
 createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "33185797-487A-F251-B9E9-EDBDB7A387E2";
+	rename -uid "FAA11482-4B27-993F-36EF-75A45D90BF7A";
 	setAttr ".g" yes;
-createNode polyCube -n "polyCube1";
-	rename -uid "BF374AA3-46E1-6F3B-3AC9-0689948E4B3F";
-	setAttr ".cuv" 4;
-createNode polyCube -n "polyCube2";
-	rename -uid "43932876-430D-895E-1830-C2B66F904E94";
-	setAttr ".cuv" 4;
-createNode polyCube -n "polyCube3";
-	rename -uid "38B78F60-4060-A543-18EF-038712012414";
-	setAttr ".cuv" 4;
-createNode polyCube -n "polyCube4";
-	rename -uid "EF7210C6-4A3C-A472-601D-B9BB09F50680";
-	setAttr ".cuv" 4;
-createNode polyCube -n "polyCube5";
-	rename -uid "C9F4B951-41F2-2F9F-D18C-39AEF9038F5B";
-	setAttr ".cuv" 4;
-createNode animCurveTL -n "pCube7_translateX";
-	rename -uid "A6E2C73A-403F-45B4-C0D5-37AF423AF01C";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 4.5280291695205559;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCube7_translateY";
-	rename -uid "4224580D-480A-3813-4D20-BDAA39508203";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1.7041456915146185;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCube7_translateZ";
-	rename -uid "E6B371B2-4FEA-95F8-A364-61B81DA9F92B";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTU -n "pCube7_visibility";
-	rename -uid "7C3992D3-4C26-FFCD-B8D6-9AB5C7CAA747";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-createNode animCurveTA -n "pCube7_rotateX";
-	rename -uid "E0615DC8-4FE2-AB25-6083-36AB4D8B368C";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTA -n "pCube7_rotateY";
-	rename -uid "D35202DB-44E7-FD06-426E-F4AAB1E599A8";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTA -n "pCube7_rotateZ";
-	rename -uid "22B9373B-4928-B59D-054C-01963F0EB27A";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTU -n "pCube7_scaleX";
-	rename -uid "3D3DD6D8-4527-88C8-C96D-9D92B943ED2B";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-createNode animCurveTU -n "pCube7_scaleY";
-	rename -uid "FD3D4832-42AB-9B8D-AEC2-EAB44DA4CD49";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-createNode animCurveTU -n "pCube7_scaleZ";
-	rename -uid "E451196C-4B63-E147-1A2E-4CA52AB938BB";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+createNode file -n "file1";
+	rename -uid "7FB0CA3C-455F-00DA-72BA-D6BE8D56E9A9";
+	setAttr ".ftn" -type "string" "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/Colorboard.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "place2dTexture1";
+	rename -uid "7C88FEFC-463A-BFC2-0D3A-4B989072CEC2";
 createNode script -n "uiConfigurationScriptNode";
-	rename -uid "ACCED5D4-4FC1-454F-A740-D082C28A8C76";
+	rename -uid "B7032563-4C4D-A1B4-52C7-4FAF3A24695A";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
@@ -3202,9 +3241,9 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -camera \"|persp1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1117\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 819\n            -height 794\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -3228,1293 +3267,19 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 819\\n    -height 794\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 819\\n    -height 794\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	rename -uid "4968D448-46D7-E224-E0FC-CAA926E60DF6";
+	rename -uid "26512FEC-44AF-837E-52A8-8590FE1B4CCC";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 250 -ast 1 -aet 250 ";
 	setAttr ".st" 6;
-createNode reference -n "Library_table_2RN";
-	rename -uid "6FF267DB-4090-7864-0688-B0BD00C07481";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"Library_table_2RN"
-		"Library_table_2RN" 0
-		"Library_table_2RN" 436
-		2 "|Library_table_2:pCube1" "translate" " -type \"double3\" 9.91911386709722009 2.59387480343501231 1.5396109251446588"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "uvPivot" " -type \"double2\" 0.28193472325801849 0.36393089592456818"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pt[0:143]" (" -s 144 -type \"float3\" 0 0 0 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.337860099999999"
-		+ "9e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 3.3378600999999999e-06 0 -5.2154063999999999e-08 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
-		+ " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
-		)
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts" " -s 144"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[0].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[0].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[0].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[1].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[1].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[1].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[2].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[2].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[2].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[3].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[3].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[3].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[4].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[4].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[4].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[5].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[5].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[5].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[6].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[6].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[6].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[7].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[7].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[7].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[8].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[8].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[8].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[9].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[9].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[9].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[10].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[10].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[10].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[11].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[11].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[11].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[12].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[12].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[12].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[13].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[13].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[13].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[14].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[14].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[14].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[15].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[15].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[15].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[16].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[16].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[16].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[17].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[17].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[17].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[18].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[18].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[18].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[19].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[19].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[19].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[20].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[20].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[20].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[21].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[21].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[21].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[22].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[22].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[22].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[23].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[23].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[23].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[24].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[24].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[24].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[25].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[25].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[25].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[26].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[26].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[26].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[27].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[27].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[27].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[28].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[28].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[28].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[29].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[29].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[29].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[30].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[30].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[30].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[31].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[31].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[31].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[32].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[32].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[32].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[33].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[33].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[33].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[34].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[34].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[34].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[35].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[35].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[35].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[36].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[36].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[36].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[37].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[37].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[37].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[38].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[38].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[38].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[39].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[39].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[39].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[40].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[40].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[40].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[41].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[41].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[41].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[42].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[42].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[42].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[43].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[43].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[43].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[44].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[44].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[44].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[45].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[45].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[45].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[46].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[46].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[46].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[47].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[47].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[47].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[48].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[48].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[48].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[49].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[49].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[49].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[50].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[50].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[50].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[51].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[51].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[51].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[52].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[52].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[52].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[53].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[53].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[53].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[54].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[54].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[54].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[55].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[55].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[55].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[56].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[56].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[56].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[57].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[57].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[57].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[58].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[58].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[58].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[59].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[59].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[59].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[60].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[60].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[60].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[61].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[61].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[61].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[62].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[62].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[62].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[63].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[63].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[63].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[64].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[64].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[64].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[65].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[65].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[65].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[66].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[66].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[66].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[67].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[67].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[67].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[68].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[68].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[68].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[69].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[69].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[69].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[70].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[70].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[70].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[71].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[71].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[71].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[72].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[72].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[72].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[73].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[73].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[73].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[74].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[74].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[74].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[75].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[75].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[75].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[76].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[76].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[76].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[77].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[77].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[77].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[78].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[78].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[78].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[79].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[79].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[79].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[80].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[80].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[80].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[81].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[81].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[81].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[82].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[82].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[82].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[83].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[83].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[83].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[84].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[84].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[84].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[85].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[85].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[85].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[86].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[86].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[86].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[87].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[87].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[87].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[88].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[88].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[88].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[89].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[89].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[89].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[90].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[90].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[90].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[91].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[91].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[91].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[92].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[92].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[92].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[93].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[93].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[93].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[94].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[94].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[94].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[95].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[95].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[95].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[96].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[96].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[96].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[97].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[97].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[97].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[98].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[98].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[98].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[99].pntx" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[99].pnty" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[99].pntz" " -av"
-		
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[100].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[100].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[100].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[101].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[101].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[101].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[102].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[102].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[102].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[103].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[103].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[103].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[104].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[104].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[104].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[105].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[105].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[105].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[106].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[106].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[106].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[107].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[107].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[107].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[108].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[108].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[108].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[109].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[109].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[109].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[110].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[110].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[110].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[111].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[111].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[111].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[112].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[112].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[112].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[113].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[113].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[113].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[114].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[114].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[114].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[115].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[115].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[115].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[116].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[116].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[116].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[117].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[117].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[117].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[118].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[118].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[118].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[119].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[119].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[119].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[120].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[120].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[120].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[121].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[121].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[121].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[122].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[122].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[122].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[123].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[123].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[123].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[124].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[124].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[124].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[125].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[125].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[125].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[126].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[126].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[126].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[127].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[127].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[127].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[128].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[128].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[128].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[129].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[129].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[129].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[130].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[130].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[130].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[131].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[131].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[131].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[132].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[132].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[132].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[133].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[133].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[133].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[134].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[134].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[134].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[135].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[135].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[135].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[136].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[136].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[136].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[137].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[137].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[137].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[138].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[138].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[138].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[139].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[139].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[139].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[140].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[140].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[140].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[141].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[141].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[141].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[142].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[142].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[142].pntz" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[143].pntx" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[143].pnty" 
-		" -av"
-		2 "|Library_table_2:pCube1|Library_table_2:pCubeShape1" "pnts[143].pntz" 
-		" -av";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode polyTweakUV -n "polyTweakUV1";
-	rename -uid "58057F2A-43D4-E78D-B9FB-0E83FE73A662";
-	setAttr ".uopa" yes;
-	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.094681859 0.8139298 -0.29994738
-		 0.8139298 -0.094681859 0.60866427 -0.29994738 0.60866427 -0.094681859 0.40339881
-		 -0.29994738 0.40339881 -0.094681859 0.19813333 -0.29994738 0.19813333 -0.094681859
-		 -0.0071322024 -0.29994738 -0.0071322024 -0.5052129 0.8139298 -0.5052129 0.60866427
-		 0.11058366 0.8139298 0.11058366 0.60866427;
-createNode animCurveTL -n "pCubeShape1_pnts_0__pntx";
-	rename -uid "4A9E5458-49A0-9611-D5E0-EBB7C9B55D98";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_0__pnty";
-	rename -uid "523F85F3-4C4B-8456-2E1A-7C888FC031D9";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_0__pntz";
-	rename -uid "D5F76A30-4B6A-A7F3-EACE-3E85FC7F5CA8";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_1__pntx";
-	rename -uid "17A611CA-4A6E-9999-CB4C-B5953136B38F";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_1__pnty";
-	rename -uid "7B1CC430-435D-F5C5-D713-D3B8B2C39A0B";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_1__pntz";
-	rename -uid "804CD621-4297-0DD4-536F-DAB2AF98B3A9";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_2__pntx";
-	rename -uid "F44ADBD5-4FC9-63B2-4755-50952372AC0F";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_2__pnty";
-	rename -uid "CA1AB38F-472E-3F1E-97DB-D5B0A77F2E7F";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_2__pntz";
-	rename -uid "E5D45609-4EF7-4C96-912E-C08953A22863";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_3__pntx";
-	rename -uid "9D69972A-4289-CB51-5876-1EA98CBC7322";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_3__pnty";
-	rename -uid "CA7E0983-406C-8186-DD18-3BA925412369";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_3__pntz";
-	rename -uid "6B5BB7A8-41E1-A4DF-3D2B-8F871A426704";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_4__pntx";
-	rename -uid "3B3167A3-4F87-4FB3-FEF9-ED96E0D38E4A";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_4__pnty";
-	rename -uid "F40E012F-4EDD-3F05-FB20-7287FDD5DD14";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_4__pntz";
-	rename -uid "06CBA46A-4919-5CB5-0ACB-C68A4E536403";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_5__pntx";
-	rename -uid "00E075C3-40EA-8860-73D3-528B8963E74E";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_5__pnty";
-	rename -uid "95FD531C-4D20-F15C-C02B-82AB2FC04A6B";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_5__pntz";
-	rename -uid "B8D4420A-4C4A-3CD9-94AA-BBADA4B7B910";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_6__pntx";
-	rename -uid "1DD53248-4156-DC44-5812-139AEA7872A7";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_6__pnty";
-	rename -uid "014018B6-455A-A50B-0E8D-B1A6BF892C7F";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_6__pntz";
-	rename -uid "00A1E2BA-437F-651E-B34C-AA9E55342079";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_7__pntx";
-	rename -uid "631E8FFB-44BB-7E77-482D-FC90CEB137E7";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_7__pnty";
-	rename -uid "34577DC1-4895-1DC9-58DB-BDB5749CF32D";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "pCubeShape1_pnts_7__pntz";
-	rename -uid "5E4837B0-4B69-670B-C728-88BAB687DDB8";
-	setAttr ".tan" 3;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr ".kot[0]"  5;
-createNode polyMapDel -n "polyMapDel5";
-	rename -uid "1AA359CD-4BE1-40AC-D127-E3BC1B60CD64";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel6";
-	rename -uid "AD51E09C-4BB9-22F5-0592-07BF7A4676BC";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel7";
-	rename -uid "1FDBF61B-4738-C0EB-9FB7-139F3F3683D1";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel8";
-	rename -uid "AAE8E978-4B01-7928-A1D5-25A147FB5B68";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel9";
-	rename -uid "8D3CACDE-4051-117B-DD15-A3A5B70025CE";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel10";
-	rename -uid "C8A44694-4D56-DE34-EAC6-5E8032FD7202";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel11";
-	rename -uid "BA4AC62C-4C78-BEA0-862F-4A85A9C4EDE5";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel12";
-	rename -uid "938D5B45-4967-8153-D582-3DB41DFE1664";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel13";
-	rename -uid "A485F2B2-4B3C-3DDA-82A6-9FA07668EA1D";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel14";
-	rename -uid "75B34335-40C4-3390-801F-7381AEAAE5C8";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel15";
-	rename -uid "2810D69B-4F0C-6548-CFB9-A59739C84782";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel16";
-	rename -uid "973AD83D-483C-A281-0355-A989F934CA12";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyTweak -n "polyTweak3";
-	rename -uid "30CA7B29-46B2-A8D5-8CAD-4C8E153A3D34";
-	setAttr ".uopa" yes;
-	setAttr -s 8 ".tk";
-	setAttr -s 8 ".tk";
-createNode polyMapDel -n "polyMapDel17";
-	rename -uid "84CEED6A-4B60-E9B9-AAB4-CABDF199D622";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode polyMapDel -n "polyMapDel18";
-	rename -uid "CF304800-4200-0641-98B5-DBB0AFA697AA";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode reference -n "Coffee_mugRN";
-	rename -uid "2169F8A2-4D70-B507-441F-1780312BD0FD";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"Coffee_mugRN"
-		"Coffee_mug:Library_books_closedRN" 0
-		"Coffee_mugRN" 0
-		"Coffee_mugRN" 3
-		2 "|Coffee_mug:pCube1" "translate" " -type \"double3\" 8.80351879935552262 2.02836472773356657 4.73899443498125272"
-		
-		2 "|Coffee_mug:pCube1" "rotate" " -type \"double3\" 0 212.90784936339142064 0"
-		
-		2 "|Coffee_mug:pCube1" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		"Coffee_mug:Library_books_closedRN" 2
-		2 "|Coffee_mug:Library_books_closed:pCube12" "translate" " -type \"double3\" 9.53285931293704358 2.68467859187489788 0"
-		
-		2 "|Coffee_mug:Library_books_closed:pCube13" "translate" " -type \"double3\" 9.53285931293704358 2.32450335979565015 0";
-lockNode -l 1 ;
-createNode file -n "Libary_chair:file1";
-	rename -uid "A2F9B39E-40BF-8407-8CF6-D7A03A34712F";
-	setAttr ".ftn" -type "string" "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/Colorboard.png";
-	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
-createNode place2dTexture -n "Libary_chair:place2dTexture1";
-	rename -uid "DF461D1B-4C8E-7A7B-2391-399606B702AF";
-createNode reference -n "Libary_chairRN";
-	rename -uid "7C4B8CFA-4243-53B4-E038-7FA41AAFC29D";
-	setAttr -s 10 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"Libary_chairRN"
-		"Libary_chairRN" 0
-		"Libary_chairRN" 21
-		2 "|Libary_chair1:pCube9" "translate" " -type \"double3\" 27.37726347621365619 1.85535724264245205 -49.54496908863420401"
-		
-		2 "|Libary_chair1:pCylinder3" "translate" " -type \"double3\" 0 0.65145644360132904 5.2505265842408404"
-		
-		2 "|Libary_chair1:pCylinder3" "translateZ" " -av"
-		2 "|Libary_chair1:pCylinder3" "translateY" " -av"
-		2 "|Libary_chair1:pCylinder3" "rotate" " -type \"double3\" 0 19.70866618094623135 0"
-		
-		2 "|Libary_chair1:pCylinder3" "rotateY" " -av"
-		2 "|Libary_chair1:pCylinder3" "scale" " -type \"double3\" 1.21360567699298616 1.21360567699298616 1.21360567699298616"
-		
-		2 "|Libary_chair1:pCylinder3" "scaleX" " -av"
-		2 "|Libary_chair1:pCylinder3" "scaleY" " -av"
-		2 "|Libary_chair1:pCylinder3" "scaleZ" " -av"
-		2 "|Libary_chair1:pCylinder3" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.translateZ" "Libary_chairRN.placeHolderList[1]" 
-		""
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.translateX" "Libary_chairRN.placeHolderList[2]" 
-		""
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.translateY" "Libary_chairRN.placeHolderList[3]" 
-		""
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.visibility" "Libary_chairRN.placeHolderList[4]" 
-		""
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.rotateX" "Libary_chairRN.placeHolderList[5]" 
-		""
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.rotateY" "Libary_chairRN.placeHolderList[6]" 
-		""
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.rotateZ" "Libary_chairRN.placeHolderList[7]" 
-		""
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.scaleX" "Libary_chairRN.placeHolderList[8]" 
-		""
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.scaleY" "Libary_chairRN.placeHolderList[9]" 
-		""
-		5 4 "Libary_chairRN" "|Libary_chair1:pCylinder3.scaleZ" "Libary_chairRN.placeHolderList[10]" 
-		"";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode animCurveTL -n "pCylinder3_translateX";
-	rename -uid "B6D3A69A-46E4-A689-2F15-5EA2416151EF";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "pCylinder3_translateY";
-	rename -uid "3120AC69-46C1-326D-A0D5-7DA0CC4E4DA8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "pCylinder3_translateZ";
-	rename -uid "2131AFBC-44F2-341A-41EE-2C9331BE5EAF";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 4.6812108189080197;
-createNode animCurveTU -n "pCylinder3_visibility";
-	rename -uid "A2ACDD1D-4968-B851-BC76-47A6D3E46083";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-createNode animCurveTA -n "pCylinder3_rotateX";
-	rename -uid "2A65AA33-418A-D823-3353-908776CD6794";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "pCylinder3_rotateY";
-	rename -uid "DE0B9481-4636-CCE8-E6AB-D2AE830EADED";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "pCylinder3_rotateZ";
-	rename -uid "1E44673A-420C-5554-34CA-3AAFAFB2F21A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "pCylinder3_scaleX";
-	rename -uid "6CA7CB7F-4B94-4755-1F8D-B893DA9B885B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "pCylinder3_scaleY";
-	rename -uid "D4D599F8-4A95-64E2-B843-3191A74D813E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "pCylinder3_scaleZ";
-	rename -uid "A1477654-4062-E7BA-BC06-7AB1ABF98793";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTL -n "pasted__pCylinder3_translateZ";
-	rename -uid "D01A50FE-4146-A248-8C4E-6A8975223AE2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 4.6812108189080197;
-createNode animCurveTL -n "pasted__pCylinder3_translateX";
-	rename -uid "95C99EE8-473A-3D91-9D52-389B5DF795FA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "pasted__pCylinder3_translateY";
-	rename -uid "524AA347-4882-0356-B9DE-D496D613D380";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "pasted__pCylinder3_visibility";
-	rename -uid "7CE39193-42D0-22C3-E418-EBB00A79C011";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-createNode animCurveTA -n "pasted__pCylinder3_rotateX";
-	rename -uid "F044FF35-4E91-5FDF-D0C4-1A9C65B67482";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "pasted__pCylinder3_rotateY";
-	rename -uid "F114F788-4504-1906-5061-CEA4F43476AB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "pasted__pCylinder3_rotateZ";
-	rename -uid "074BE41B-4DB4-60B9-8BA9-66B6E424B241";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "pasted__pCylinder3_scaleX";
-	rename -uid "F21E6720-4115-CD36-56BA-469CE39DD690";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "pasted__pCylinder3_scaleY";
-	rename -uid "32479B90-4236-53A6-F533-299D04352BC0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "pasted__pCylinder3_scaleZ";
-	rename -uid "D0B1A4DF-452B-11AA-D078-17A5BD069C78";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode groupId -n "Libary_chair2:groupId9";
-	rename -uid "746DCA56-48D8-B0EE-BB61-7B861C769CEF";
+createNode groupId -n "groupId8";
+	rename -uid "472E923E-4374-79B8-72E2-B39FD3C2D431";
 	setAttr ".ihi" 0;
-createNode groupId -n "Libary_chair2:groupId8";
-	rename -uid "FCB83AE2-44B3-AC9D-525E-A9AC133BA9A4";
+createNode groupId -n "groupId9";
+	rename -uid "132782A7-42CF-1FD0-D331-2080AB9AC17D";
 	setAttr ".ihi" 0;
 select -ne :time1;
 	setAttr ".o" 1;
@@ -4534,24 +3299,19 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 4 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 4 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 4 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :openPBR_shader1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 16 ".dsm";
+	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 2 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
-	setAttr -s 4 ".t";
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -4570,133 +3330,48 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "pCylinder3_translateZ.o" "Libary_chairRN.phl[1]";
-connectAttr "pCylinder3_translateX.o" "Libary_chairRN.phl[2]";
-connectAttr "pCylinder3_translateY.o" "Libary_chairRN.phl[3]";
-connectAttr "pCylinder3_visibility.o" "Libary_chairRN.phl[4]";
-connectAttr "pCylinder3_rotateX.o" "Libary_chairRN.phl[5]";
-connectAttr "pCylinder3_rotateY.o" "Libary_chairRN.phl[6]";
-connectAttr "pCylinder3_rotateZ.o" "Libary_chairRN.phl[7]";
-connectAttr "pCylinder3_scaleX.o" "Libary_chairRN.phl[8]";
-connectAttr "pCylinder3_scaleY.o" "Libary_chairRN.phl[9]";
-connectAttr "pCylinder3_scaleZ.o" "Libary_chairRN.phl[10]";
-connectAttr "polyMapDel16.out" "pCubeShape1.i";
-connectAttr "polyTweakUV1.uvtk[0]" "pCubeShape1.uvst[0].uvtw";
-connectAttr "polyMapDel5.out" "pCubeShape2.i";
-connectAttr "polyMapDel7.out" "pCubeShape3.i";
-connectAttr "polyMapDel18.out" "pCubeShape4.i";
-connectAttr "polyMapDel15.out" "pCubeShape5.i";
-connectAttr "polyMapDel14.out" "pCubeShape6.i";
-connectAttr "pCube7_translateX.o" "pCube7.tx";
-connectAttr "pCube7_translateY.o" "pCube7.ty";
-connectAttr "pCube7_translateZ.o" "pCube7.tz";
-connectAttr "pCube7_scaleX.o" "pCube7.sx";
-connectAttr "pCube7_scaleY.o" "pCube7.sy";
-connectAttr "pCube7_scaleZ.o" "pCube7.sz";
-connectAttr "pCube7_visibility.o" "pCube7.v";
-connectAttr "pCube7_rotateX.o" "pCube7.rx";
-connectAttr "pCube7_rotateY.o" "pCube7.ry";
-connectAttr "pCube7_rotateZ.o" "pCube7.rz";
-connectAttr "polyMapDel17.out" "pCubeShape7.i";
-connectAttr "pasted__pCylinder3_translateZ.o" "Libary_chair2:pCylinder3.tz";
-connectAttr "pasted__pCylinder3_translateY.o" "Libary_chair2:pCylinder3.ty";
-connectAttr "pasted__pCylinder3_translateX.o" "Libary_chair2:pCylinder3.tx";
-connectAttr "pasted__pCylinder3_rotateY.o" "Libary_chair2:pCylinder3.ry";
-connectAttr "pasted__pCylinder3_rotateX.o" "Libary_chair2:pCylinder3.rx";
-connectAttr "pasted__pCylinder3_rotateZ.o" "Libary_chair2:pCylinder3.rz";
-connectAttr "pasted__pCylinder3_scaleX.o" "Libary_chair2:pCylinder3.sx";
-connectAttr "pasted__pCylinder3_scaleY.o" "Libary_chair2:pCylinder3.sy";
-connectAttr "pasted__pCylinder3_scaleZ.o" "Libary_chair2:pCylinder3.sz";
-connectAttr "pasted__pCylinder3_visibility.o" "Libary_chair2:pCylinder3.v";
-connectAttr "Libary_chair2:groupId9.id" "Libary_chair2:pCylinder3Shape.iog.og[0].gid"
-		;
-connectAttr ":initialShadingGroup.mwc" "Libary_chair2:pCylinder3Shape.iog.og[0].gco"
-		;
-connectAttr "Libary_chair2:groupId8.id" "Libary_chair2:pCylinder3Shape.ciog.cog[0].cgid"
-		;
+connectAttr "polyMapDel4.out" "pCubeShape9.i";
+connectAttr "groupId9.id" "pCylinder3Shape.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCylinder3Shape.iog.og[0].gco";
+connectAttr "groupId8.id" "pCylinder3Shape.ciog.cog[0].cgid";
+connectAttr "polyMapDel3.out" "polyMapDel4.ip";
+connectAttr "polyMapDel2.out" "polyMapDel3.ip";
+connectAttr "polySurfaceShape1.o" "polyMapDel2.ip";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "polyCube1.out" "polyTweakUV1.ip";
-connectAttr "polyCube2.out" "polyMapDel5.ip";
-connectAttr "polySurfaceShape2.o" "polyMapDel6.ip";
-connectAttr "polyMapDel6.out" "polyMapDel7.ip";
-connectAttr "polyCube4.out" "polyMapDel8.ip";
-connectAttr "polyMapDel8.out" "polyMapDel9.ip";
-connectAttr "polyMapDel9.out" "polyMapDel10.ip";
-connectAttr "polyMapDel10.out" "polyMapDel11.ip";
-connectAttr "polyMapDel11.out" "polyMapDel12.ip";
-connectAttr "polyMapDel12.out" "polyMapDel13.ip";
-connectAttr "polyMapDel13.out" "polyMapDel14.ip";
-connectAttr "polySurfaceShape3.o" "polyMapDel15.ip";
-connectAttr "polyTweak3.out" "polyMapDel16.ip";
-connectAttr "polyTweakUV1.out" "polyTweak3.ip";
-connectAttr "pCubeShape1_pnts_0__pntx.o" "polyTweak3.tk[0].tx";
-connectAttr "pCubeShape1_pnts_0__pnty.o" "polyTweak3.tk[0].ty";
-connectAttr "pCubeShape1_pnts_0__pntz.o" "polyTweak3.tk[0].tz";
-connectAttr "pCubeShape1_pnts_1__pntx.o" "polyTweak3.tk[1].tx";
-connectAttr "pCubeShape1_pnts_1__pnty.o" "polyTweak3.tk[1].ty";
-connectAttr "pCubeShape1_pnts_1__pntz.o" "polyTweak3.tk[1].tz";
-connectAttr "pCubeShape1_pnts_2__pntx.o" "polyTweak3.tk[2].tx";
-connectAttr "pCubeShape1_pnts_2__pnty.o" "polyTweak3.tk[2].ty";
-connectAttr "pCubeShape1_pnts_2__pntz.o" "polyTweak3.tk[2].tz";
-connectAttr "pCubeShape1_pnts_3__pntx.o" "polyTweak3.tk[3].tx";
-connectAttr "pCubeShape1_pnts_3__pnty.o" "polyTweak3.tk[3].ty";
-connectAttr "pCubeShape1_pnts_3__pntz.o" "polyTweak3.tk[3].tz";
-connectAttr "pCubeShape1_pnts_4__pntx.o" "polyTweak3.tk[4].tx";
-connectAttr "pCubeShape1_pnts_4__pnty.o" "polyTweak3.tk[4].ty";
-connectAttr "pCubeShape1_pnts_4__pntz.o" "polyTweak3.tk[4].tz";
-connectAttr "pCubeShape1_pnts_5__pntx.o" "polyTweak3.tk[5].tx";
-connectAttr "pCubeShape1_pnts_5__pnty.o" "polyTweak3.tk[5].ty";
-connectAttr "pCubeShape1_pnts_5__pntz.o" "polyTweak3.tk[5].tz";
-connectAttr "pCubeShape1_pnts_6__pntx.o" "polyTweak3.tk[6].tx";
-connectAttr "pCubeShape1_pnts_6__pnty.o" "polyTweak3.tk[6].ty";
-connectAttr "pCubeShape1_pnts_6__pntz.o" "polyTweak3.tk[6].tz";
-connectAttr "pCubeShape1_pnts_7__pntx.o" "polyTweak3.tk[7].tx";
-connectAttr "pCubeShape1_pnts_7__pnty.o" "polyTweak3.tk[7].ty";
-connectAttr "pCubeShape1_pnts_7__pntz.o" "polyTweak3.tk[7].tz";
-connectAttr "polyCube5.out" "polyMapDel17.ip";
-connectAttr "polyCube3.out" "polyMapDel18.ip";
-connectAttr ":defaultColorMgtGlobals.cme" "Libary_chair:file1.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "Libary_chair:file1.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "Libary_chair:file1.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "Libary_chair:file1.ws";
-connectAttr "Libary_chair:place2dTexture1.c" "Libary_chair:file1.c";
-connectAttr "Libary_chair:place2dTexture1.tf" "Libary_chair:file1.tf";
-connectAttr "Libary_chair:place2dTexture1.rf" "Libary_chair:file1.rf";
-connectAttr "Libary_chair:place2dTexture1.mu" "Libary_chair:file1.mu";
-connectAttr "Libary_chair:place2dTexture1.mv" "Libary_chair:file1.mv";
-connectAttr "Libary_chair:place2dTexture1.s" "Libary_chair:file1.s";
-connectAttr "Libary_chair:place2dTexture1.wu" "Libary_chair:file1.wu";
-connectAttr "Libary_chair:place2dTexture1.wv" "Libary_chair:file1.wv";
-connectAttr "Libary_chair:place2dTexture1.re" "Libary_chair:file1.re";
-connectAttr "Libary_chair:place2dTexture1.of" "Libary_chair:file1.of";
-connectAttr "Libary_chair:place2dTexture1.r" "Libary_chair:file1.ro";
-connectAttr "Libary_chair:place2dTexture1.n" "Libary_chair:file1.n";
-connectAttr "Libary_chair:place2dTexture1.vt1" "Libary_chair:file1.vt1";
-connectAttr "Libary_chair:place2dTexture1.vt2" "Libary_chair:file1.vt2";
-connectAttr "Libary_chair:place2dTexture1.vt3" "Libary_chair:file1.vt3";
-connectAttr "Libary_chair:place2dTexture1.vc1" "Libary_chair:file1.vc1";
-connectAttr "Libary_chair:place2dTexture1.o" "Libary_chair:file1.uv";
-connectAttr "Libary_chair:place2dTexture1.ofs" "Libary_chair:file1.fs";
-connectAttr "Libary_chair:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na
-		;
+connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file1.ws";
+connectAttr "place2dTexture1.c" "file1.c";
+connectAttr "place2dTexture1.tf" "file1.tf";
+connectAttr "place2dTexture1.rf" "file1.rf";
+connectAttr "place2dTexture1.mu" "file1.mu";
+connectAttr "place2dTexture1.mv" "file1.mv";
+connectAttr "place2dTexture1.s" "file1.s";
+connectAttr "place2dTexture1.wu" "file1.wu";
+connectAttr "place2dTexture1.wv" "file1.wv";
+connectAttr "place2dTexture1.re" "file1.re";
+connectAttr "place2dTexture1.of" "file1.of";
+connectAttr "place2dTexture1.r" "file1.ro";
+connectAttr "place2dTexture1.n" "file1.n";
+connectAttr "place2dTexture1.vt1" "file1.vt1";
+connectAttr "place2dTexture1.vt2" "file1.vt2";
+connectAttr "place2dTexture1.vt3" "file1.vt3";
+connectAttr "place2dTexture1.vc1" "file1.vc1";
+connectAttr "place2dTexture1.o" "file1.uv";
+connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "Libary_chair:file1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape7.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Libary_chair2:pCylinder3Shape.ciog.cog[0]" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "Libary_chair2:pCylinder3Shape.iog.og[0]" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "Libary_chair2:groupId9.msg" ":initialShadingGroup.gn" -na;
-connectAttr "Libary_chair:file1.msg" ":initialMaterialInfo.t" -na;
-// End of Scene 2 Hintze.ma
+connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file1.oc" ":openPBR_shader1.bc";
+connectAttr "pCubeShape9.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder3Shape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder3Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId9.msg" ":initialShadingGroup.gn" -na;
+connectAttr "file1.msg" ":initialMaterialInfo.t" -na;
+// End of Libary chair.ma
