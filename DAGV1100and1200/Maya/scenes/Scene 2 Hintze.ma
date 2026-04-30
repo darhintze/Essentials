@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene 2 Hintze.ma
-//Last modified: Wed, Apr 29, 2026 02:06:33 PM
+//Last modified: Wed, Apr 29, 2026 03:45:35 PM
 //Codeset: 1252
 file -rdi 1 -ns "Library_table_2" -rfn "Library_table_2RN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Warbi/OneDrive - Utah Valley University/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Library table 2.ma";
@@ -28,18 +28,18 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "1C4ABCE0-43FD-66EE-B53A-76B74F40C9EF";
+fileInfo "UUID" "2613BBC5-4696-2BF5-4624-63A6674359EF";
 createNode transform -s -n "persp";
 	rename -uid "6F8C682A-4D78-2DF6-2411-A29FAD687974";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 63.244162917258421 54.433183225509048 9.8018967172379234 ;
-	setAttr ".r" -type "double3" 324.59999999999587 79.199999999996663 360 ;
+	setAttr ".t" -type "double3" 29.771981282900633 37.554238581021323 24.56374340544355 ;
+	setAttr ".r" -type "double3" 323.99999999999295 49.999999999996618 359.99999999999829 ;
 	setAttr ".rpt" -type "double3" 1.7140402955454079e-15 -1.1610758485738044e-15 -9.819906946446922e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "281B1EAC-4ECE-15A5-C14A-5E8799B998C8";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 82.540553534496667;
+	setAttr ".coi" 52.630180584042051;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
